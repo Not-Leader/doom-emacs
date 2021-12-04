@@ -170,19 +170,31 @@ interface.
 
 See `doom-localleader-key' and `doom-localleader-alt-key' to change the
 localleader prefix."
-  (if (featurep! :editor evil)
+  (cond
+   ((featurep! :editor evil)
       ;; :non-normal-prefix doesn't apply to non-evil sessions (only evil's
       ;; emacs state)
-      `(general-define-key
-        :states '(normal visual motion emacs insert)
-        :major-modes t
-        :prefix doom-localleader-key
-        :non-normal-prefix doom-localleader-alt-key
-        ,@args)
     `(general-define-key
+      :states '(normal visual motion emacs insert)
+      :major-modes t
+      :prefix doom-localleader-key
+      :non-normal-prefix doom-localleader-alt-key
+      ,@args))
+   ((featurep! :editor meow)
+    `(general-define-key
+      :keymaps '(meow-normal-state-keymap meow-motion-state-keymap)
+      :major-modes t
+      :prefix doom-localleader-key
+      ,@args)
+    `(general-define-key
+      :keymaps 'meow-insert-state-keymap
       :major-modes t
       :prefix doom-localleader-alt-key
-      ,@args)))
+      ,@args))
+   (t `(general-define-key
+        :major-modes t
+        :prefix doom-localleader-alt-key
+        ,@args))))
 
 ;; We use a prefix commands instead of general's :prefix/:non-normal-prefix
 ;; properties because general is incredibly slow binding keys en mass with them
