@@ -317,6 +317,6 @@
          (meow/setup-keypad))
       (t (meow-normal-define-key
           (cons doom-leader-key doom-leader-map))
-         (meow-motion-ovewrite-define-key
+         (meow-motion-overwrite-define-key
           (cons doom-leader-key doom-leader-map))
          (meow/setup-leader))))
