@@ -16,24 +16,23 @@
   "7" #'meow-digit-argument
   "8" #'meow-digit-argument
   "9" #'meow-digit-argument
-  "0" #'meow-digit-argument
-  "v" #'meow-keypad-mode))
+  "0" #'meow-digit-argument))
 
 ;; Keypad
 (defun meow/setup-keypad ()
-  (meow-leader-define-key
-   '("?" . meow-cheatsheet)
-   '("/" . meow-keypad-describe-key)
-   '("1" . meow-digit-argument)
-   '("2" . meow-digit-argument)
-   '("3" . meow-digit-argument)
-   '("4" . meow-digit-argument)
-   '("5" . meow-digit-argument)
-   '("6" . meow-digit-argument)
-   '("7" . meow-digit-argument)
-   '("8" . meow-digit-argument)
-   '("9" . meow-digit-argument)
-   '("0" . meow-digit-argument)))
+ (meow-leader-define-key
+  '("?" . meow-cheatsheet)
+  '("/" . meow-keypad-describe-key)
+  '("1" . meow-digit-argument)
+  '("2" . meow-digit-argument)
+  '("3" . meow-digit-argument)
+  '("4" . meow-digit-argument)
+  '("5" . meow-digit-argument)
+  '("6" . meow-digit-argument)
+  '("7" . meow-digit-argument)
+  '("8" . meow-digit-argument)
+  '("9" . meow-digit-argument)
+  '("0" . meow-digit-argument)))
 
 ;; applies to all layouts (except dvp)
 (defun meow/setup ()
