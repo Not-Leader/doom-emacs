@@ -180,7 +180,7 @@ localleader prefix."
       :prefix doom-localleader-key
       :non-normal-prefix doom-localleader-alt-key
       ,@args))
-   ((featurep! :editor meow)
+   ((and (featurep! :editor meow) (not (featurep! :editor meow +keypad)))
     `(general-define-key
       :keymaps '(meow-normal-state-keymap meow-motion-state-keymap)
       :major-modes t
