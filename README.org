@@ -1,0 +1,2 @@
+#+TITLE: Doom Emacs fork with Meow module
+This repository has been archived; please see [[https://github.com/Not-Leader/doom-meow][doom-meow]] to see the current state of the meow module for doom emacs.
