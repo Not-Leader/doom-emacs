@@ -27,7 +27,8 @@ them with =:editor meow= will cause errors.
 + ~+dvorak~ Add default configuration for ~dvorak~ layout.
 + ~+dvp~ Add default configuration for ~dvp~ layout.
 + ~+qwerty~ Add default configuration for ~qwerty~ layout.
-+ ~+useful-keybindings~ Add ~evil~ like keybindings.
++ ~+keypad~ Use Meow's ~meow-keypad-mode~ instead of Doom's ~doom/leader~
++ ~+override~ Have meow override movement keybinds in most major modes.
 
 ** Plugins
 
